@@ -92,24 +92,23 @@
 //
 // Note that as of 8.3, iOS doesn't support `week`.
 
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  input[type="date"],
-  input[type="time"],
-  input[type="datetime-local"],
-  input[type="month"] {
-    &.form-control {
-      line-height: $input-height;
-    }
+_::-webkit-full-page-media, // Hack to make this CSS be Safari-only; see http://browserbu.gs/css-hacks/webkit-full-page-media/
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+  &.form-control {
+    line-height: $input-height;
+  }
 
-    &.input-sm,
-    .input-group-sm &.form-control {
-      line-height: $input-height-sm;
-    }
+  &.input-sm,
+  .input-group-sm &.form-control {
+    line-height: $input-height-sm;
+  }
 
-    &.input-lg,
-    .input-group-lg &.form-control {
-      line-height: $input-height-lg;
-    }
+  &.input-lg,
+  .input-group-lg &.form-control {
+    line-height: $input-height-lg;
   }
 }
 
