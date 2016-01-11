@@ -25,6 +25,9 @@
 // Colors
 //
 // Grayscale and brand colors for use across Bootstrap.
+$teal-dark:                 #123630 !default;
+$teal:                      #194b42 !default;
+$teal-light:                #329887 !default;
 
 $gray-dark:                 #373a3c !default;
 $gray:                      #55595c !default;
@@ -32,10 +35,10 @@ $gray-light:                #818a91 !default;
 $gray-lighter:              #eceeef !default;
 $gray-lightest:             #f7f7f9 !default;
 
-$brand-primary:             #0275d8 !default;
+$brand-primary:             $teal-light !default;
 $brand-success:             #5cb85c !default;
 $brand-info:                #5bc0de !default;
-$brand-warning:             #f0ad4e !default;
+$brand-warning:             #fcc11a !default;
 $brand-danger:              #d9534f !default;
 
 

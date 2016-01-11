@@ -22,3 +22,13 @@
 @include bg-variant('.bg-warning', $brand-warning);
 
 @include bg-variant('.bg-danger', $brand-danger);
+
+@include bg-variant('.bg-gray-dark', $gray-dark);
+@include bg-variant('.bg-gray', $gray);
+@include bg-variant('.bg-gray-light', $gray-light);
+@include bg-variant('.bg-gray-lighter', $gray-lighter);
+@include bg-variant('.bg-gray-lightest', $gray-lightest);
+
+@include bg-variant('.bg-teal-dark', $teal-dark);
+@include bg-variant('.bg-teal', $teal);
+@include bg-variant('.bg-teal-light', $teal-light);
