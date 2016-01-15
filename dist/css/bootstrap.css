@@ -6817,7 +6817,7 @@ a.text-danger:focus, a.text-danger:hover {
 }
 
 html {
-  font-size: 9px;
+  font-size: 10px;
 }
 
 @media (min-width: 544px) {
@@ -6834,7 +6834,7 @@ html {
 
 @media (min-width: 992px) {
   html {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
