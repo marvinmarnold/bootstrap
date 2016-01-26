@@ -321,7 +321,7 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Hind", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
   color: #373a3c;
@@ -699,7 +699,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: "Nova Mono", monospace;
 }
 
 code {
@@ -5620,7 +5620,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Hind", sans-serif;
   font-size: .875rem;
   font-style: normal;
   font-weight: normal;
@@ -5721,7 +5721,7 @@ button.close {
   display: block;
   max-width: 276px;
   padding: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Hind", sans-serif;
   font-size: .875rem;
   font-style: normal;
   font-weight: normal;
@@ -6808,24 +6808,24 @@ a.text-danger:focus, a.text-danger:hover {
 }
 
 html {
-  font-size: 10px;
+  font-size: 11px;
 }
 
 @media (min-width: 544px) {
-  html {
-    font-size: 10px;
-  }
-}
-
-@media (min-width: 768px) {
   html {
     font-size: 12px;
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   html {
     font-size: 13px;
+  }
+}
+
+@media (min-width: 992px) {
+  html {
+    font-size: 16px;
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */

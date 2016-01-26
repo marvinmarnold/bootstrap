@@ -53,23 +53,23 @@
 @import "utilities";
 
 html {
-  font-size: 10px;
+  font-size: 11px;
 }
 
 @include media-breakpoint-up(sm) {
-  html {
-    font-size: 10px;
-  }
-}
-
-@include media-breakpoint-up(md) {
   html {
     font-size: 12px;
   }
 }
 
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(md) {
   html {
     font-size: 13px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 16px;
   }
 }
