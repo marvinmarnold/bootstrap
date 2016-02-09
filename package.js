@@ -13,6 +13,8 @@ Package.onUse(function (api) {
   api.versionsFrom('METEOR@1.0');
   api.use('jquery', 'client');
   api.addFiles([
+    'dist/tether/tether.min.css',
+    'dist/tether/tether.min.js',
     'dist/css/bootstrap.css',
     'dist/js/bootstrap.js'
   ], 'client');
