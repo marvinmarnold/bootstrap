@@ -101,20 +101,6 @@
   text-align: right; // right align buttons
   border-top: 1px solid $modal-footer-border-color;
   @include clearfix(); // clear it in case folks use .pull-* classes on buttons
-
-  // Properly space out buttons
-  .btn + .btn {
-    margin-bottom: 0; // account for input[type="submit"] which gets the bottom margin like all other inputs
-    margin-left: 5px;
-  }
-  // but override that for button groups
-  .btn-group .btn + .btn {
-    margin-left: -1px;
-  }
-  // and override it for block buttons as well
-  .btn-block + .btn-block {
-    margin-left: 0;
-  }
 }
 
 // Measure scrollbar width for padding body during modal show/hide
@@ -130,17 +116,17 @@
 @include media-breakpoint-up(sm) {
   // Automatically set modal's width for larger viewports
   .modal-dialog {
-    width: $modal-md;
+    max-width: $modal-md;
     margin: 30px auto;
   }
+
   .modal-content {
     @include box-shadow($modal-content-sm-up-box-shadow);
   }
 
-  // Modal sizes
-  .modal-sm { width: $modal-sm; }
+  .modal-sm { max-width: $modal-sm; }
 }
 
-@include media-breakpoint-up(md) {
-  .modal-lg { width: $modal-lg; }
+@include media-breakpoint-up(lg) {
+  .modal-lg { max-width: $modal-lg; }
 }
