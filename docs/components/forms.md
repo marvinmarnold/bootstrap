@@ -84,7 +84,7 @@ Remember, since Bootstrap utilizes the HTML5 doctype, **all inputs must have a `
 </form>
 {% endexample %}
 
-Below is a complete list of the specific from controls supported by Bootstrap and the classes that customize them. Additional documentation is available for each group.
+Below is a complete list of the specific form controls supported by Bootstrap and the classes that customize them. Additional documentation is available for each group.
 
 <table>
   <thead>
@@ -271,7 +271,7 @@ The `.form-group` class is the easiest way to add some structure to forms. Its o
 
 ### Inline forms
 
-Use the `.form-inline` class to to display a series of labels, form controls, and buttons on a single horizontal row. Form controls within inline forms behave differently:
+Use the `.form-inline` class to display a series of labels, form controls, and buttons on a single horizontal row. Form controls within inline forms behave differently:
 
 - Controls are `display: inline-block` to provide alignment control via `vertical-align` and `margin`.
 - Controls receive `width: auto` to override the Bootstrap default `width: 100%`.
@@ -634,7 +634,12 @@ Block help text—for below inputs or for longer lines of help text—can be eas
 
 ## Validation
 
-Bootstrap includes validation styles for danger, warning, and success states on form controls. To use, add `.has-warning`, `.has-danger`, or `.has-success` to the parent element. Any `.form-control-label`, `.form-control`, and `.text-help` within that element will receive the validation styles.
+Bootstrap includes validation styles for danger, warning, and success states on form controls.
+
+- To use, add `.has-warning`, `.has-danger`, or `.has-success` to the parent element. Any `.form-control-label`, `.form-control`, and `.text-help` within that element will receive the validation styles.
+- Validation icons are `url()`s configured via Sass variables that are applied to `background-image` declarations for each state.
+- You may use your own base64 PNGs or SVGs by updating the Sass variables and recompiling.
+- Icons can also be disabled entirely by setting the variables to `none` or commenting out the source Sass.
 
 {% comment %}
 {% callout warning %}
@@ -812,3 +817,22 @@ Here's how it works:
 - We declare a `height` on the `<input>` for proper spacing for surrounding content.
 
 In other words, it's an entirely custom element, all generated via CSS.
+
+#### Translating or customizing the strings
+
+The [`:lang()` pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/:lang) is used to allow for easy translation of the "Browse" and "Choose file..." text into other languages. Simply override or add entries to the `$custom-file-text` SCSS variable with the relevant [language tag](https://en.wikipedia.org/wiki/IETF_language_tag) and localized strings. The English strings can be customized the same way. For example, here's how one might add a Spanish translation (Spanish's language code is `es`):
+
+{% highlight scss %}
+$custom-file-text: (
+  placeholder: (
+    en: "Choose file...",
+    es: "Seleccionar archivo..."
+  ),
+  button-label: (
+    en: "Browse",
+    es: "Navegar"
+  )
+);
+{% endhighlight %}
+
+You'll need to set the language of your document (or subtree thereof) correctly in order for the correct text to be shown. This can be done using [the `lang` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang) or the [`Content-Language` HTTP header](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.12), among other methods.
