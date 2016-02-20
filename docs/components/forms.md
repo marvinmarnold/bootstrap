@@ -332,7 +332,9 @@ Because of this, you may need to manually address the width and alignment of ind
 
 ### Using the Grid
 
-For more structured form layouts, you can utilize Bootstrap's predefined grid classes (or mixins). Add the `.row` class to form groups and use the `.col-*` classes to specify the width of your labels and controls. To vertically center the labels with the textual inputs—nearly anything with `.form-control`—use the `.form-control-label` class.
+For more structured form layouts, you can utilize Bootstrap's predefined grid classes (or mixins) to create horizontal forms. Add the `.row` class to form groups and use the `.col-*-*` classes to specify the width of your labels and controls.
+
+Be sure to add `.form-control-label` to your `<label>`s as well so they're vertically centered with their associated labels.
 
 {% example html %}
 <form>
@@ -762,6 +764,33 @@ Custom checkboxes and radios can also be disabled. Add the `disabled` boolean at
 </label>
 {% endexample %}
 
+#### Validation states
+
+Add other states to your custom forms with our validation classes.
+
+{% example html %}
+<div class="form-group has-success">
+  <label class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input">
+    <span class="custom-control-indicator"></span>
+    <span class="custom-control-description">Check this custom checkbox</span>
+  </label>
+</div>
+<div class="form-group has-warning">
+  <label class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input">
+    <span class="custom-control-indicator"></span>
+    <span class="custom-control-description">Check this custom checkbox</span>
+  </label>
+</div>
+<div class="form-group has-danger m-b-0">
+  <label class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input">
+    <span class="custom-control-indicator"></span>
+    <span class="custom-control-description">Check this custom checkbox</span>
+  </label>
+</div>
+{% endexample %}
 
 #### Stacked
 
