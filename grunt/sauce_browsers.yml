@@ -3,15 +3,15 @@
 
   {
     browserName: "safari",
-    platform: "OS X 10.10"
+    platform: "OS X 10.11"
   },
   {
     browserName: "chrome",
-    platform: "OS X 10.10"
+    platform: "OS X 10.11"
   },
   {
     browserName: "firefox",
-    platform: "OS X 10.10"
+    platform: "OS X 10.11"
   },
 
   # Mac Opera not currently supported by Sauce Labs
@@ -38,11 +38,11 @@
 
   {
     browserName: "chrome",
-    platform: "Windows 8.1"
+    platform: "Windows 10"
   },
   {
     browserName: "firefox",
-    platform: "Windows 8.1"
+    platform: "Windows 10"
   },
 
   # Win Opera 15+ not currently supported by Sauce Labs
@@ -50,7 +50,7 @@
   {
     browserName: "iphone",
     platform: "OS X 10.10",
-    version: "9.1"
+    version: "9.2"
   },
 
   # iOS Chrome not currently supported by Sauce Labs
