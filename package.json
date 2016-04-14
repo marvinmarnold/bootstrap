@@ -97,5 +97,8 @@
     "dependencies": {
       "jquery": "*"
     }
+  },
+  "dependencies": {
+    "tether": "^1.2.0"
   }
 }
