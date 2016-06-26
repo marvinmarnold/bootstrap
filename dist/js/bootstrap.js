@@ -69,7 +69,7 @@ var Util = (function ($) {
       delegateType: transition.end,
       handle: function handle(event) {
         if ($(event.target).is(this)) {
-          return event.handleObj.handler.apply(this, arguments);
+          return event.handleObj.handler.apply(this, arguments); // eslint-disable-line prefer-rest-params
         }
         return undefined;
       }
@@ -782,9 +782,11 @@ var Carousel = (function ($) {
 
         switch (event.which) {
           case ARROW_LEFT_KEYCODE:
-            this.prev();break;
+            this.prev();
+            break;
           case ARROW_RIGHT_KEYCODE:
-            this.next();break;
+            this.next();
+            break;
           default:
             return;
         }

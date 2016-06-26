@@ -244,9 +244,11 @@ var Carousel = (function ($) {
 
         switch (event.which) {
           case ARROW_LEFT_KEYCODE:
-            this.prev();break;
+            this.prev();
+            break;
           case ARROW_RIGHT_KEYCODE:
-            this.next();break;
+            this.next();
+            break;
           default:
             return;
         }
