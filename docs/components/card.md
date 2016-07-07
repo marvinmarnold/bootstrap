@@ -51,6 +51,8 @@ Cards support a wide variety of content, including images, text, list groups, li
 </div>
 {% endexample %}
 
+Lists can be added to a card by adding a list group.
+
 {% example html %}
 <div class="card">
   <ul class="list-group list-group-flush">
@@ -61,6 +63,8 @@ Cards support a wide variety of content, including images, text, list groups, li
 </div>
 {% endexample %}
 
+`.card-img-top` places an image to the top of the card. With `.card-text`, text can be added to the card. Text within `.card-text` can also be styled with the standard HTML tags.
+
 {% example html %}
 <div class="card">
   <img class="card-img-top" data-src="holder.js/100px180/?text=Image cap" alt="Card image cap">
@@ -70,6 +74,8 @@ Cards support a wide variety of content, including images, text, list groups, li
 </div>
 {% endexample %}
 
+Card titles are used by adding `.card-title` to a `<h*>` tag. In the same way, links are added and placed next to each other by adding `.card-link` to  a `<a>` tag.
+
 {% example html %}
 <div class="card card-block">
   <h4 class="card-title">Card title</h4>
@@ -78,6 +84,10 @@ Cards support a wide variety of content, including images, text, list groups, li
   <a href="#" class="card-link">Another link</a>
 </div>
 {% endexample %}
+
+Subtitles are used by adding a `.card-subtitle` to an `<h*>` tag. If the `.card-title` and the `.card-subtitle` items are placed in a `.card-block` item, the card title and subtitle are aligned nicely.
+
+The multiple content types can be easily combined to create the card you need. See below for an example.
 
 {% example html %}
 <div class="card">
@@ -170,6 +180,8 @@ Add an optional header and/or footer within a card.
 </div>
 {% endexample %}
 
+Card headers can be styled by adding `.card-header` to `<h*>` elements.
+
 {% example html %}
 <div class="card">
   <h3 class="card-header">Featured</h3>
@@ -207,6 +219,56 @@ Add an optional header and/or footer within a card.
   </div>
   <div class="card-footer text-muted">
     2 days ago
+  </div>
+</div>
+{% endexample %}
+
+## Header nav
+
+Use Bootstrap's nav pills or tabs within a card header. Be sure to always include a `.pull-*-*` utility class for proper alignment.
+
+{% example html %}
+<div class="card text-xs-center">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs pull-xs-left">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Active</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+  </div>
+  <div class="card-block">
+    <h4 class="card-title">Special title treatment</h4>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+{% endexample %}
+
+{% example html %}
+<div class="card text-xs-center">
+  <div class="card-header">
+    <ul class="nav nav-pills card-header-pills pull-xs-left">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Active</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+  </div>
+  <div class="card-block">
+    <h4 class="card-title">Special title treatment</h4>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
 {% endexample %}
@@ -311,6 +373,9 @@ Cards include their own variant classes for quickly changing the `background-col
   </div>
 </div>
 {% endexample %}
+
+{% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}
+{{ callout-include | markdownify }}
 
 ## Outline variants
 
@@ -443,7 +508,9 @@ Only applies to small devices and above.
 
 ## Columns
 
-Cards can be organized into [Masonry](http://masonry.desandro.com)-like columns with just CSS by wrapping them in `.card-columns`. Only applies to small devices and above.
+Cards can be organized into [Masonry](http://masonry.desandro.com)-like columns with just CSS by wrapping them in `.card-columns`. Cards are ordered from top to bottom and left to right when wrapped in `.card-columns`.
+
+Only applies to small devices and above.
 
 **Heads up!** This is **not available in IE9 and below** as they have no support for the [`column-*` CSS properties](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Using_multi-column_layouts).
 
@@ -509,3 +576,16 @@ Cards can be organized into [Masonry](http://masonry.desandro.com)-like columns 
   </div>
 </div>
 {% endexample %}
+
+Card columns can also be extended and customized with some additional code. Shown below is an extension of the `.card-columns` class using the same CSS we use—CSS columns— to generate a set of responsive tiers for changing the number of columns.
+
+{% highlight scss %}
+.card-columns {
+  @include media-breakpoint-only(lg) {
+    column-count: 4;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 5;
+  }
+}
+{% endhighlight %}
